@@ -1,0 +1,60 @@
+var Students = [{"firstName":"Harish", "lastName":"Khot", "rollNo": "1", "subjects": "Maths, Science"},
+		{"firstName":"Ajit", "lastName":"Aher", "rollNo": "2", "subjects": "Maths, History"}
+		];
+
+function showStudentList(){
+	studentList(Students);
+	}
+
+ function studentList(arr){
+ var out = "<table border=1 width=100%><tr><th>First Name</th><th>Last Name</th><th>Roll Number</th> <th>Subjects</th></tr>";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += "<tr><td>" + arr[i].firstName + "</td><td >" + 
+			  arr[i].lastName + "</td><td >" +
+			  arr[i].rollNo + "</td><td >" +
+			  arr[i].subjects ;
+	}
+	out +="</table>";
+	document.getElementById("studentDiv").innerHTML = out;
+ }
+
+ function addStudentInfo(){
+	var newStu = {"firstName":document.getElementById("newFirstName").value,
+			"lastName":document.getElementById("newLastName").value,
+			"rollNo":document.getElementById("newRollNo").value,
+			"subjects":document.getElementById("newSubjects").value, }; 
+
+		Students.push(newStu);
+		studentList(Students);
+		document.getElementById("newFirstName").value="";
+		document.getElementById("newLastName").value="";
+		document.getElementById("newRollNo").value="";
+		document.getElementById("newSubjects").value="";
+ }
+
+ function updateStudent(){
+ }
+
+ function deleteStudent(){
+ findAndRemove(Students, "firstName", document.getElementById("deleteByName").value);
+ studentList(Students);
+ }
+
+ function deleteFirst(){
+ Students.splice(0, 1);
+ studentList(Students);
+ }
+
+ function deleteLast(){
+ Students.pop();
+ studentList(Students);
+ }
+
+ function findAndRemove(array, property, value) {
+ for(i=0;i<=array.length;i++){
+  if(array[i].firstName==value){
+	Students.splice(i, 1);
+  }
+ }
+}

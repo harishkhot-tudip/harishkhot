@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="ajax.js"></script>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+td {
+  padding: 5px;
+  text-align:center;
+}
+
+th{
+background-color:gray;
+}
+</style>
+</head>
+<body>
+
+<h2>AJAX</h2>
+
+<button type="button" onclick="loadFile()">Request data</button>
+
+<button type="button" onclick="loadDoc('adhyaksh.html',myFunction)">Requestdata by Callback</button>
+<p id="loadFile">change data</p>
+<p id="demo"> By Callback</p>
+
+<hr>
+<p><b>Start typing a name in the input field below:</b></p>
+<form> 
+First name: <input type="text" onkeyup="showHint(this.value)">
+</form>
+<p>Suggestions: <span id="txtHint"></span></p>
+<hr>
+<button type="button" onclick="loadDocuments()">Request data</button>
+<table id="testp" width=100%></table>
+
+</body>
+</html>

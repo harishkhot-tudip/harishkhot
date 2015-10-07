@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="assignJQ.js"></script>
+
+ 
+<style> 
+#panel, #flip1 {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+
+</head>
+<body>
+
+<button id="hide">Hide</button>
+<button id="show">show</button>
+<p id="show1">This is a paragraph with little content.</p>
+
+<hr>
+
+<button id="toggle">toggle</button>
+<p id="toggle1"> This is another small paragraph.</p>
+
+
+<hr>
+
+
+<p style="font-size:20px">Demonstrate fadeIn() with different parameters.</p>
+
+<button id="box1">Click to fadeIn boxes</button>
+<button id="box2">Click to fadeOut boxes</button>
+<button id="box3">Click to fadeToggle boxes</button><br><br>
+<div  id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+
+<hr>
+
+<div id="flip1">Click to slide down/up panel</div>
+<div id="panel">Hello world!</div>
+<hr>
+
+<button id="animate">click to animate div</button><br><br>
+<div id="boxmove" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+<br><br><br><br><br><br>
+
+<hr>
+<button id="animate1">click to QueAnimate div</button><br><br>
+<div id="divAnimate" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+<br><br><br><br><br><br><hr>
+
+<p id="test1">Click to set text</p>
+<p id="test2">Click HTML button.</p>
+
+<p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+
+<button id="btn1">Set Text</button>
+<button id="btn2">Set HTML</button>
+<button id="btn3">Set Value</button>
+<br><hr>
+
+<p id="SomeAppends">This is a paragraph.</p>
+
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+
+<button id="btn4">Append text</button>
+<button id="btn6">Prepend text</button>
+<button id="btn5">Append list items</button>
+
+</body>
+</html>

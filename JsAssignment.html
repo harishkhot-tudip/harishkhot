@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+head{
+font-size:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>My Web Page</h1>
+
+<p id="paraChange">A Paragraph</p>
+<script>
+function myFunction() {
+    document.getElementById("paraChange").innerHTML = "Paragraph changed.";
+}
+</script>
+<button type="button" onclick="myFunction()">Try it</button>
+
+<hr>
+
+<p class="head">Creating and using an object method.</p>
+
+<p>An object method is a function definition, stored as a property value.</p>
+<p id="demo1" style="color:red;font-size:15px" ></p>
+<p id="demo2"></p>
+<script>
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+       return this.firstName + " " + this.lastName;
+    }
+	
+	//xyz : function(){return this.id;}
+};
+
+document.getElementById("demo1").innerHTML = person.fullName();
+document.getElementById("demo2").innerHTML = person.xyz();
+
+</script>
+
+<hr>
+<div style="background-color: gray">
+
+<button onclick="this.innerHTML=Date()" style="margin-left:30%;float:left">The time is?</button><br>
+
+</div>
+<hr>
+
+
+<p id="p1">Please locate where 'locate' occurs!.</p>
+<button onclick="myFunction1()">Try it</button>
+<p id="p2"></p>
+
+<script>
+function myFunction1() {
+    var str = document.getElementById("p1").innerHTML;
+    var pos = str.lastIndexOf("locate");
+    document.getElementById("p2").innerHTML = "last index of locate : "+pos;
+}
+</script>
+
+<hr>
+<div style="background-color: gray">
+<p style="font-size:20px;text-align:center" >   using object property</p>
+<p id="object" style="text-align:center"></p>
+</div>
+<script>
+var txt = "";
+var person = {fname:"John", lname:"Doe", age:25}; 
+var x;
+for (x in person) {
+    txt += person[x] + " ";
+}
+document.getElementById("object").innerHTML = txt;
+</script>
+
+</body>
+</html>
