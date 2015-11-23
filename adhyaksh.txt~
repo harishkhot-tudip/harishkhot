@@ -1,0 +1,9 @@
+worked to create test case by mosaic object.
+understood the working of require function.
+used absolute path, where require is not working.
+worked to get a handle on those dependencies given in configuration file.
+used hooks to set up preconditions and clean up after tests.
+working to use interfaces expect, assert.
+
+
+adhyaksh....
